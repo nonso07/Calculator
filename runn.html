@@ -1,0 +1,246 @@
+<html>
+
+<head> 
+<title> calculator </title>
+<style> 
+.answer{
+     border: 12px;
+	 padding: 12px;
+	 background-color: blue;
+	 size: 30%;
+	 position: center;	 
+        }
+h2.head{
+         text-align:center-left;
+         text-decoration: none;	
+		 color: white;
+         text-transform: capitalize;		 
+ 
+       }
+.main	{
+         background-image: url("slide_bg3.jpg") 
+        }   
+.input  {
+         padding: 10px
+		 
+        }
+
+</style>
+</head>
+
+
+<body>
+<div class="main" >
+<h2 class="head"> Simpel Calculator project</h2>
+<div class="input">
+<input type="number" id="hi" value=" " placeholder="input the value you want to comput">
+<input type="number" id="h" value=" " > 
+</div><br>
+<div class="head">
+<button type="button" onclick="add()" ><strong>+</strong></button>
+<button type="button" onclick="sub()" ><strong>-</strong></button>
+<button type="button" onclick="mult()" ><strong>&times;</strong></button>
+<button type="button" onclick="divd()" ><strong>&divide;</strong></button><br>
+
+<button type="button" onclick="sin()" ><strong>Sin()</strong></button>
+<button type="button" onclick="cos()" ><strong>cos()</strong></button>
+<button type="button" onclick="tan()" ><strong>Tan()</strong></button><br>
+<button type="button" onclick="sqr()" ><strong>square</strong></button>
+<button type="button" onclick="root()" ><strong>Squar Root()</strong></button>
+</div>
+</div>
+<div class="answer">
+<button>
+<p id="display"> The answer will display here</p>
+</button>
+</div>
+
+<p> To use this calculator, just input the data you want to comput and click on the operator </p>
+<script>
+
+//Function code for addition 
+function add(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+// manuplating the conveted number to be expressed as number
+var ans=((nu1*10)+(nu2*10))/10;
+alert(ans)
+document.getElementById('display').innerHTML=ans;
+}
+
+//Function code for subtraciton
+function sub(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+// manuplating the conveted number to be expressed as number
+var ans=((nu1*10)-(nu2*10))/10;
+alert(ans)
+document.getElementById('display').innerHTML=ans;
+}
+
+//Function code for multiplcation
+function mult(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+// manuplating the conveted number to be expressed as number
+var ans=((nu1*10)*(nu2*10))/100;
+alert(ans)
+document.getElementById('display').innerHTML=ans;
+}
+
+//Function code for Division
+function divd(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+// manuplating the conveted number to be expressed as number
+var ans=((nu1*10)/(nu2*10));
+alert(ans)
+document.getElementById('display').innerHTML=ans;
+}
+
+//Function code for square
+function sqr(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+if(nu1*10>0 && nu2*10>0){
+                         alert("sorry use only on input box for this function")
+                         }else{
+// manuplating the conveted number to be expressed as number
+if(nu1*10>0){
+var ans=((nu1*1)*(nu1*1));
+document.getElementById('display').innerHTML=ans;
+             }else{
+
+var ans2=((nu2*1)*(nu2*1));
+//alert(ans)
+document.getElementById('display').innerHTML=ans2;
+                  }
+}
+}
+
+
+//Function code for Trignometry sin function
+function sin(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+if(nu1*10>0 && nu2*10>0){
+                         alert("sorry use only on input box for this function")
+                         }else{
+// manuplating the conveted number to be expressed as number
+if(nu1*10>0){
+var ans=(nu1*1);
+var tans=Math.sin(ans*(Math.PI/180));
+document.getElementById('display').innerHTML=tans;
+             }else{
+
+var ans2=(nu2*1);
+var tans2=Math.sin(ans2*(Math.PI/180));
+//alert(ans)
+document.getElementById('display').innerHTML=tans2;
+                  }
+}
+}
+
+//Function code for Trignometry cos function
+function cos(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+if(nu1*10>0 && nu2*10>0){
+                         alert("sorry use only on input box for this function")
+                         }else{
+// manuplating the conveted number to be expressed as number
+if(nu1*10>0){
+var ans=(nu1*1);
+var tans=Math.cos(ans*(Math.PI/180));
+document.getElementById('display').innerHTML=tans;
+             }else{
+
+var ans2=(nu2*1);
+var tans2=Math.cos(ans2*(Math.PI/180));
+//alert(ans)
+document.getElementById('display').innerHTML=tans2;
+                  }
+}
+}
+
+
+//Function code for Trignometry Tan function in degree
+function tan(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+if(nu1*10>0 && nu2*10>0){
+                         alert("sorry use only on input box for this function")
+                         }else{
+// manuplating the conveted number to be expressed as number
+if(nu1*10>0){
+var ans=(nu1*1);
+var tans=Math.tan(ans*(Math.PI/180));
+document.getElementById('display').innerHTML=tans;
+             }else{
+
+var ans2=(nu2*1);
+var tans2=Math.tan(ans2*(Math.PI/180));
+//alert(ans)
+document.getElementById('display').innerHTML=tans2;
+                  }
+}
+}
+
+//Function code for Trignometry Tan function in degree
+function root(){
+var test=document.getElementById("hi").value;
+var test1=document.getElementById("h").value;
+//converting the value form string to number
+var nu1=Number(test);
+var nu2=Number(test1);
+if(nu1*10>0 && nu2*10>0){
+                         alert("sorry use only on input box for this function")
+                         }else{
+// manuplating the conveted number to be expressed as number
+if(nu1*10>0){
+var ans=(nu1*1);
+var tans=Math.sqrt(ans);
+document.getElementById('display').innerHTML=tans;
+             }else{
+
+var ans2=(nu2*1);
+var tans2=Math.sqrt(ans2);
+//alert(ans)
+document.getElementById('display').innerHTML=tans2;
+                  }
+}
+}
+
+
+
+
+
+</script>
+</body>
+
+
+</html>
